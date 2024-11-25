@@ -3,10 +3,10 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 16  # Use the appropriate Node.js version, for example, Node 16
+      nodejs: 16  
     commands:
       - echo Installing dependencies...
-      - npm install  # This installs your project's dependencies (express, socket.io, etc.)
+      - npm install  
 
   pre_build:
     commands:
@@ -19,13 +19,13 @@ phases:
   post_build:
     commands:
       - echo Starting the server...
-      - npm start  # This assumes your package.json has a "start" script to run your server
+      - npm start 
 
 artifacts:
   files:
-    - '**/*'  # Include all files in the project directory
-    - '!node_modules/**'  # Exclude node_modules folder from build artifacts
+    - '**/*'  
+    - '!node_modules/**'  
 
 cache:
   paths:
-    - 'node_modules/**/*'  # Cache node_modules to speed up future builds
+    - 'node_modules/**/*'  
